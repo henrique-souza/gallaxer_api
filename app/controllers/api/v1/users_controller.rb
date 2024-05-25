@@ -10,12 +10,6 @@ module Api
         render json: @users
       end
 
-      # GET /user/:id
-      def show
-        @user = User.find(params[:id])
-        render json: @user
-      end
-
       # POST /users
       def create
         @user = User.new(user_params)
@@ -26,6 +20,12 @@ module Api
         else
           render error: { error: 'Unable to create User.' }, status: 400
         end
+      end
+
+      # GET /user/:id
+      def show
+        @user = User.find(params[:id])
+        render json: @user
       end
 
       # PUT /users/:id
