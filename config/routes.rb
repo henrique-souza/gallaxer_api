@@ -1,6 +1,7 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# frozen_string_literal: true
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  resources :users, only: %i[create show update destroy]
+  resources :contents, only: %i[create show update destroy]
+  resources :ratings, only: [:create]
 end
