@@ -14,7 +14,8 @@ User.destroy_all
 # Create USER_COUNT users
 USER_COUNT.times do |i|
   puts "Creating user: #{i}"
-  User.create(name: Faker::Name.name, email: Faker::Internet.email(domain: 'gallaxer.com'), password_digest: Faker::Internet.password)
+  User.create(name: Faker::Name.name, email: Faker::Internet.email(domain: 'gallaxer.com'),
+              password_digest: Faker::Internet.password)
 end
 
 # Create CONTENT_COUNT for each user
