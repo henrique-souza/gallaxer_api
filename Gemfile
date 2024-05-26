@@ -50,3 +50,5 @@ end
 gem "faker", "~> 3.3"
 
 gem "rubocop", "~> 1.64"
+
+gem "bcrypt", "~> 3.1"
